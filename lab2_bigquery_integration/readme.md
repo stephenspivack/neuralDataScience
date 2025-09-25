@@ -127,5 +127,3 @@ df.head()
 | Import errors                 | Re-run `pip install` as shown above                  |
 
 ---
-
-If you're still stuck, contact Prof. Spivack or come to office hours.
