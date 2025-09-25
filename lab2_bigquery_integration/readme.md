@@ -99,9 +99,13 @@ import matplotlib.pyplot as plt
 client = bigquery.Client()
 
 query = '''
-SELECT * 
-FROM `neural-ds-fe73.lab1_ephys.mt` 
-LIMIT 10
+  select
+    trial_id,
+    (select array_agg(cast(x as float64)) from unnest(json_extract_array(spike_times)) as x) as spike_times,
+    condition_id,
+    condition_angle,
+    unit_label
+  from neural-ds-fe73.lab1_ephys.mt
 '''
 
 df = client.query(query).to_dataframe()
