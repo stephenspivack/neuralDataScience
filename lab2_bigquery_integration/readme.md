@@ -96,7 +96,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-client = bigquery.Client()
+client = bigquery.Client(project="neural-ds-fe73", client_options={"api_endpoint": "https://bigquery.googleapis.com"})
 
 query = '''
   select
