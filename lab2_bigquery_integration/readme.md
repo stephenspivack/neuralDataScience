@@ -76,7 +76,7 @@ gcloud auth application-default login
 Open Terminal and run:
 
 ```bash
-pip install google-cloud-bigquery pandas numpy matplotlib notebook ipython
+pip install db-dtypes google-cloud-bigquery pandas numpy matplotlib notebook ipython
 ```
 
 ---
